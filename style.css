@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    
+    font-size: 12px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    margin: 0rem 0rem;
+    padding: 0rem;
+}
+
+.container {
+    display: flex;
+    min-height: 150vh;
+}
+
+.mobileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 150vh;
+    margin: 0rem 0rem;
+}
+
+.logo {
+    padding: 2rem;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.mobileImage {
+    width: 100%;
+}
+
+.mobileImage img {
+    width: 100%;
+}
+
+
+
+.textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleLight {
+   font-size: 3rem;
+   font-weight: 100;
+   padding-top: 4rem;
+   padding-bottom: .5rem;
+   letter-spacing: 1rem;
+   color: hsl(0, 36%, 70%);
+}
+
+.titleHeavy {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+    letter-spacing: 1.25rem;
+    line-height: 3rem;
+}
+
+.salesInfo {
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    font-size: 1.25rem;
+    color: hsl(0, 36%, 70%);
+    line-height: 2rem;
+}
+
+#emailBox {
+    height: 4rem;
+    width: 28rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 40px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputArea {
+    padding: 1rem;
+}
+
+.textInput {
+    border: none;
+    padding-left: 1rem;
+    background: transparent;
+}
+
+.textInput:focus{
+    outline: none;
+}
+
+.textInput::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+
+.arrowButton {
+    height: 4rem;
+    width: 5.5rem;
+    position:absolute;
+    top: -.1rem;
+    right: -.25rem;
+    border-radius: 40px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 8px #f2f2f2;
+    border: none;
+    transition: .5s ;
+}
+
+.arrowButton:hover{
+    transform:scale(1.1,1.1);
+    transition: .5s ;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%));
+}
+
+.arrowButton img {
+    height: 2rem;
+}
+
+#alertImage {
+    padding-left: 4rem;
+    display: none;
+}
+#alertText {
+    text-align: left;
+    color: hsl(0, 93%, 68%);
+    padding-right: 11rem;
+    display: none;
+}
+
+.heroDesktop {
+    display: none;
+}
+
+.heroDesktop img {
+    width: 100%;
+}
+@media only screen and (min-width:480px) {
+    .mobileImage {
+        display: none;
+    }
+
+    html {
+        background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    }
+    .heroDesktop {
+        display: block;
+    }
+
+    .textArea {
+        align-items: flex-start;
+        width: 60rem;
+    }
+
+    .mobileContainer {
+        margin-left: 10%;
+        margin-top: 3rem;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .titleLight {
+        font-size: 5rem;
+        color: hsl(0, 36%, 70%);
+        padding-top: 8rem;
+     }
+     
+     .titleHeavy {
+         font-size: 5rem;
+         font-weight: 600;
+         padding-left: 0rem;
+         padding-right: 25rem;
+         text-align: left;
+         letter-spacing: 1.25rem;
+         line-height: 5.5rem;
+     }
+     
+     .salesInfo {
+         text-align: left;
+         padding-left: 0rem;
+         padding-right: 20rem;
+         padding-top: 3rem;
+         font-size: 1.4rem;
+         color: hsl(0, 36%, 70%);
+         line-height: 2.2rem;
+     }
+
+     #alertText {
+         padding-left: 2rem;
+     }
+
+     #emailBox {
+        height: 5rem;
+        width: 38rem;
+        margin-top: 4rem;
+    }
+
+    .arrowButton {
+        height: 5rem;
+        width: 9rem;
+        position:absolute;
+    }
+}
